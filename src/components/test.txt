@@ -1,0 +1,14 @@
+{
+	<div>
+	<input type="text" value={filter} onChange={updateFilter} />
+	<div style={{ display: "flex", flexWrap: "wrap", padding: 10 }}>
+		{pokeList
+			.filter((pokemon1) => pokemon1.name.startsWith(filter))
+			.map((pokemon2, id) => (
+				<div key={id} style={{ margin: 20 }}>
+					<PokeCard name={pokemon2.name} url={pokemon2.url} />
+				</div>
+			))}
+	</div>
+</div>
+}
